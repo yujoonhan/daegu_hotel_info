@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greenart.mapper.DaeguHotelMapper">
+    <insert id="insertDaeguHotel">
+        INSERT INTO daegu_hotel_info
+            (h_shop, h_tel, h_address, h_offer, h_facilities, h_tag)
+        VALUES  
+            (#{h_shop}, #{h_tel}, #{h_address}, #{h_offer}, #{h_facilities}, #{h_tag});
+    </insert>
+    <select id="selectHotelName" resultType="com.greenart.vo.DaeguHotelVO">
+        select h_shop from daegu_hotel_info;
+    </select>
+    <select id="selectSearchAdr" resultType="com.greenart.vo.DaeguHotelVO">
+        select h_shop, h_address from daegu_hotel_info
+        where h_address like #{region};
+    </select>
+</mapper>

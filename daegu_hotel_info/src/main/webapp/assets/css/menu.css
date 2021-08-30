@@ -1,0 +1,9 @@
+.container {
+    width: 1080px; height: 200px; background-color: #fab;
+}
+.banner_area {
+    width: 1080px; height: 150px; background-color: #fba;
+}
+.main_menu {
+    width: 1080px; height: 50px; background-color: #baf;
+}

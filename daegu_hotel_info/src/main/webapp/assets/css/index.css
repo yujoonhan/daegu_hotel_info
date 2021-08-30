@@ -1,0 +1,7 @@
+.prod_area {
+    width: 1080px; height: 800px; background-color: #bfa;
+}
+.each_hotel_area {
+    width: 300px; height: 200px; background-color: #abf;
+    display: inline-block; margin: 15px;
+}
