@@ -10,6 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.greenart.mapper.DaeguHotelMapper;
 import com.greenart.service.DaeguHotelService;
 import com.greenart.vo.DaeguHotelVO;
 
@@ -27,6 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DaeguHotelAPIController {
     @Autowired
     DaeguHotelService service;
+    @Autowired
+    DaeguHotelMapper mapper;
     
     // https://thegoodnight.daegu.go.kr/ajax/api/thegoodnight.html?mode=json&item_count=200
     @GetMapping("/api/daeguHotel")
@@ -101,14 +104,19 @@ public class DaeguHotelAPIController {
         return resultMap;
     }
 
-    @GetMapping("/api/searchRegion/{region}")
-    public Map<String, Object> getSearchRegion(
-        @PathVariable @Nullable String region
+    @GetMapping("/api/searchHotel/{region}&{offer}&{facility}")
+    public Map<String, Object> getSearchHotel(
+        @PathVariable @Nullable String region,
+        @PathVariable @Nullable String offer,
+        @PathVariable @Nullable String facility
     ){
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
         region = region+"%";
-        List<DaeguHotelVO> vo = service.selectSearchAdr(region);
-        resultMap.put("searchRegion", vo);
+        offer = "%"+offer+"%";
+        facility = "%"+facility+"%";
+        List<DaeguHotelVO> vo = service.selectSearch(region, offer, facility);
+        resultMap.put("searchHotel", vo);
         return resultMap;
     }
+
 }

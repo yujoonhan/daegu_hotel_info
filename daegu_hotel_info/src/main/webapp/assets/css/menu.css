@@ -1,5 +1,5 @@
 .container {
-    width: 1080px; height: 200px; background-color: #fab;
+    width: 1080px; height: 200; background-color: #fab; margin: auto;
 }
 .banner_area {
     width: 1080px; height: 150px; background-color: #fba;

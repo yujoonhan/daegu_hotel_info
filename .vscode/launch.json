@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DaeguHotelInfoApplication<daegu_hotel_info>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.greenart.DaeguHotelInfoApplication",
+            "projectName": "daegu_hotel_info",
+            "args": ""
+        }
+    ]
+}

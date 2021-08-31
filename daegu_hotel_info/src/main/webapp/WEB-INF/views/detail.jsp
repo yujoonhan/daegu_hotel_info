@@ -9,14 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/detail.css">
-    <script src="/assets/js/detail.js"></script>
+    <!-- <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/index.css"> -->
+    <!-- <script src="/assets/js/index.js"></script> -->
 </head>
 <body>
-    <div class="detail_area">
-        
+    <div class="container">
+        <div class="prod_area">
+
+        </div>
     </div>
 </body>
 </html>

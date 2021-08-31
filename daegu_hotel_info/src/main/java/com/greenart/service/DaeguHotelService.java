@@ -18,7 +18,49 @@ public class DaeguHotelService {
     public List<DaeguHotelVO> selectHotelName() {
         return mapper.selectHotelName();
     }
-    public List<DaeguHotelVO> selectSearchAdr(String region) {
-        return mapper.selectSearchAdr(region);
+    public List<DaeguHotelVO> selectSearch(String region, String offer, String facility) {
+        return mapper.selectSearch(region, offer, facility);
+    }
+
+
+    public List<DaeguHotelVO> selectSearchFacDis() {
+        return mapper.selectSearchFacDis();
+    }
+    public List<DaeguHotelVO> selectSearchFacBus() {
+        return mapper.selectSearchFacBus();
+    }
+    public List<DaeguHotelVO> selectSearchFacEnt() {
+        return mapper.selectSearchFacEnt();
+    }
+    public List<DaeguHotelVO> selectSearchFacVid() {
+        return mapper.selectSearchFacVid();
+    }
+    public List<DaeguHotelVO> selectSearchFacHea() {
+        return mapper.selectSearchFacHea();
+    }
+    
+
+    public List<DaeguHotelVO> selectSearchSerBre() {
+        return mapper.selectSearchSerBre();
+    }
+    public List<DaeguHotelVO> selectSearchSerMor() {
+        return mapper.selectSearchSerMor();
+    }
+    public List<DaeguHotelVO> selectSearchSerLau() {
+        return mapper.selectSearchSerLau();
+    }
+
+    
+    public List<DaeguHotelVO> selectSearchSerTra() {
+        return mapper.selectSearchSerTra();
+    }
+    public List<DaeguHotelVO> selectSearchSerStr() {
+        return mapper.selectSearchSerStr();
+    }
+    public List<DaeguHotelVO> selectSearchSerFac() {
+        return mapper.selectSearchSerFac();
+    }
+    public List<DaeguHotelVO> selectSearchSerNat() {
+        return mapper.selectSearchSerNat();
     }
 }

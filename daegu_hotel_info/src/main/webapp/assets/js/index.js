@@ -4,52 +4,45 @@ $(function(){
         url:"/api/hotelName",
         success:function(r){
             console.log(r);
-            $(".each_hotel_area").html("");
-            // '<img src="/image/${item.pi_img_uri}">'+
-            for(let i=0; i<r.hotelName.length; i++){
-                let tag =
-                    '<div class="each_hotel_area">'+
-                        '<a href="#" class="prod_item">'+
-                            '<div class="img_area">'+
-                            '</div>'+
-                            '<div class="text_area">'+
-                                '<h2>'+r.hotelName[i].h_shop+'</h2>'+
-                            '</div>'+
-                        '</a>'+
-                    "</div>";
-                $(".prod_area").append(tag);
+
+            for(let i=0; i<9; i++){
+                let tag = "<tbody class='hotel-tbody'><tbody>";
+                $(".hotel_table").append(tag);
             }
+
+            for(let i=0; i<r.hotelName.length; i++){
+                console.log(Math.floor(i/8));
+                let page = Math.floor(i/8);
+                let tag =
+                    '<tr>'+
+                            '<td>'+r.hotelName[i].h_shop+'</td>'+
+                            '<td>'+r.hotelName[i].h_tel+'</td>'+
+                            '<td>'+r.hotelName[i].h_address+'</td>'+
+                            '<td>'+r.hotelName[i].h_offer+'</td>'+
+                            '<td>'+r.hotelName[i].h_facilities+'</td>'+
+                            '<td>'+r.hotelName[i].h_tag+'</td>'+
+                    "</tr>";
+                $(".hotel-tbody").eq(page).append(tag);
+            }
+            $(".hotel-tbody").eq(0).addClass("active");
+
+            $("#page_next").click(function(){
+                let currentPage = Number($(".current").html());
+                currentPage++;
+                if(currentPage > 9) currentPage = 9;
+                $(".current").html(currentPage);
+                $(".hotel-tbody").removeClass("active");
+                $(".hotel-tbody").eq(currentPage-1).addClass("active");
+            })
+            $("#page_prev").click(function(){
+                let currentPage = Number($(".current").html());
+                currentPage--;
+                if(currentPage < 1) currentPage = 1;
+                $(".current").html(currentPage);
+                $(".hotel-tbody").removeClass("active");
+                $(".hotel-tbody").eq(currentPage-1).addClass("active");
+            })
         }
     })
 
-    // $("#search_region").change(function(){
-    //     let region = $("#search_region").find("option:selected").val();
-    //     getSearchRegion(region);
-    // });
-
-    // getSearchRegion("중구")
-
-    // function getSearchRegion(region){
-    //     $.ajax({
-    //         type:"get",
-    //         url:"/api/searchRegion/"+region,
-    //         success:function(r){
-    //             console.log(r);
-    //             $(".each_hotel_area").html("");
-    //             for(let i=0; i<r.searchRegion.length; i++){
-    //                 let tag =
-    //                     '<div class="each_hotel_area">'+
-    //                         '<a href="#" class="prod_item">'+
-    //                             '<div class="img_area">'+
-    //                             '</div>'+
-    //                             '<div class="text_area">'+
-    //                                 '<h2>'+r.searchRegion[i].h_shop+'</h2>'+
-    //                             '</div>'+
-    //                         '</a>'+
-    //                     "</div>";
-    //                 $(".prod_area").append(tag);
-    //             }
-    //         }
-    //     })
-    // }
 })
