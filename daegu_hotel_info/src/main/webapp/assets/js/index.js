@@ -15,12 +15,12 @@ $(function(){
                 let page = Math.floor(i/8);
                 let tag =
                     '<tr>'+
-                            '<td>'+r.hotelName[i].h_shop+'</td>'+
-                            '<td>'+r.hotelName[i].h_tel+'</td>'+
-                            '<td>'+r.hotelName[i].h_address+'</td>'+
-                            '<td>'+r.hotelName[i].h_offer+'</td>'+
-                            '<td>'+r.hotelName[i].h_facilities+'</td>'+
-                            '<td>'+r.hotelName[i].h_tag+'</td>'+
+                        '<td>'+r.hotelName[i].h_shop+'</td>'+
+                        '<td>'+r.hotelName[i].h_tel+'</td>'+
+                        '<td>'+r.hotelName[i].h_address+'</td>'+
+                        '<td>'+r.hotelName[i].h_offer+'</td>'+
+                        '<td>'+r.hotelName[i].h_facilities+'</td>'+
+                        '<td>'+r.hotelName[i].h_tag+'</td>'+
                     "</tr>";
                 $(".hotel-tbody").eq(page).append(tag);
             }

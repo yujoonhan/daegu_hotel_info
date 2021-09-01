@@ -1,0 +1,26 @@
+.title{
+    text-align: center; font-size: 28px; font-weight: 600;
+    margin-bottom: 50px; margin-top: 50px;
+}
+.table td{
+    padding: 5px;
+}
+.table input, .table select{
+    width: 300px; padding: 10px; outline: none;
+    border: 1px solid #ddd; background-color: #f7f7f7; border-radius: 5px;
+}
+.table input{width: 300px;}
+.table button{
+    border: 0; border-radius: 3px; background-color: rgb(88, 88, 88);
+    color: #fff; padding: 10px 20px; cursor: pointer;
+}
+.table #join{
+    width: 200px; margin-top: 30px; margin-left: 100px;
+}
+.table button:hover{
+    background-color: #333;
+}
+.table{width: 540px; margin: 0 auto;}
+.table tr:last-child{text-align: center;}
+.table select{width: 322px;}
+body{background-color: #fcfcfc;}

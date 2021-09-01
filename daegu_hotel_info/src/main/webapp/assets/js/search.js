@@ -29,6 +29,10 @@ $(function(){
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -62,6 +66,10 @@ $(function(){
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -95,6 +103,10 @@ $(function(){
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -128,6 +140,10 @@ $(function(){
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -161,6 +177,10 @@ $(function(){
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -195,6 +215,10 @@ $(function(){
                 $("#btn_hea").hide('click');
                 $("#btn_mor").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -228,6 +252,10 @@ $(function(){
                 $("#btn_hea").hide('click');
                 $("#btn_bre").hide('click');
                 $("#btn_lau").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
@@ -261,6 +289,10 @@ $(function(){
                 $("#btn_hea").hide('click');
                 $("#btn_bre").hide('click');
                 $("#btn_mor").hide('click');
+                $("#btn_tra").hide('click');
+                $("#btn_str").hide('click');
+                $("#btn_fac").hide('click');
+                $("#btn_nat").hide('click');
             }
         })
     })
