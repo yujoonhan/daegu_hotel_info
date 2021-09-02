@@ -15,12 +15,18 @@ public class DaeguHotelService {
     public void insertDaeguHotel(DaeguHotelVO vo){
         mapper.insertDaeguHotel(vo);
     }
-    public List<DaeguHotelVO> selectHotelName() {
-        return mapper.selectHotelName();
+    public List<DaeguHotelVO> selectHotel() {
+        return mapper.selectHotel();
     }
-    public List<DaeguHotelVO> selectSearch(String region, String offer, String facility) {
-        return mapper.selectSearch(region, offer, facility);
+    public DaeguHotelVO selectHotelNameBySeq(Integer h_seq) {
+        return mapper.selectHotelNameBySeq(h_seq);
     }
+    
+    public String getHotelImageFileName(String uri){
+        return mapper.getHotelImageFileName(uri);
+    }
+
+
 
 
     public List<DaeguHotelVO> selectSearchFacDis() {

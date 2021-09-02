@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import com.greenart.service.HotelCartService;
 import com.greenart.service.MemberService;
 import com.greenart.vo.LoginVO;
 import com.greenart.vo.MemberInfoVO;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberAPIController {
     @Autowired
     MemberService service;
+    @Autowired
+    HotelCartService hc_service;
 
     @PostMapping("/member/join")
     public ResponseEntity<Map<String, Object>> postMemberJoin(
@@ -67,6 +70,12 @@ public class MemberAPIController {
     ) {
         Map<String,Object> resultMap = service.loginMember(vo);
         session.setAttribute("member", resultMap.get("member"));
+
+        MemberInfoVO member = (MemberInfoVO)resultMap.get("member");
+        if(member != null){
+            Integer cart_cnt = hc_service.selectCount(member.getMi_seq());
+            session.setAttribute("cart_cnt", cart_cnt);
+        }
 
         return resultMap;
     }

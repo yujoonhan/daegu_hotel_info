@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greenart.mapper.HotelCartMapper">
+    <insert id="insertProduct">
+        insert into hotel_cart
+            (hc_mi_seq, hc_h_seq)
+        values
+            (#{hc_mi_seq}, #{hc_h_seq})
+    </insert>
+    <select id="selectCartProductCnt" resultType="java.lang.Integer">
+        select count(*) from hotel_cart 
+        where hc_mi_seq=#{hc_mi_seq} and hc_h_seq=#{hc_h_seq}
+    </select>
+    <update id="updateCartProductCnt">
+        update hotel_cart set hc_count = hc_count + #{hc_count}
+        where hc_mi_seq = #{hc_mi_seq} and hc_pi_seq = #{hc_pi_seq}
+    </update>
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(*) from hotel_cart where hc_mi_seq = #{mi_seq}
+    </select>
+    <select id="selectCartProducts" resultType="com.greenart.vo.DaeguHotelVO">
+        select * from
+        (
+	        select * from hotel_cart where hc_mi_seq = #{mi_seq}
+        ) a inner join daegu_hotel_info b on a.hc_h_seq = b.h_seq
+    </select>
+
+    <delete id="deleteCartProduct">
+        delete from hotel_cart
+        where hc_mi_seq = #{mi_seq} and hc_h_seq = #{h_seq}
+    </delete>
+    <update id="changeProductCnt">
+        update hotel_cart set hc_count=#{cnt} where hc_mi_seq=#{mi_seq}
+        and hc_pi_seq=#{pi_seq}
+    </update>
+</mapper>

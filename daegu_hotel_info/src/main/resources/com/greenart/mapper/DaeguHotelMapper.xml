@@ -8,39 +8,34 @@
         VALUES  
             (#{h_shop}, #{h_tel}, #{h_address}, #{h_offer}, #{h_facilities}, #{h_tag});
     </insert>
-    <select id="selectHotelName" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag 
-        from daegu_hotel_info;
+    <select id="selectHotel" resultType="com.greenart.vo.DaeguHotelVO">
+        select * from daegu_hotel_info;
     </select>
-    <select id="selectSearch" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_address, h_tel from daegu_hotel_info
-        where h_address like #{region}
-        and h_offer like #{offer}
-        and h_facilities like #{facility};
+    <select id="selectHotelNameBySeq" resultType="com.greenart.vo.DaeguHotelVO">
+        select * from daegu_hotel_info where h_seq = #{h_seq};
     </select>
-
 
     <select id="selectSearchFacDis" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_facilities like '%장애인%' or h_tag like '%장애인%';
     </select>
     <select id="selectSearchFacBus" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_facilities like '%비즈니스%' or h_tag like '%비즈니스%';
     </select>
     <select id="selectSearchFacEnt" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_facilities like '%Pub%' or h_tag like '%노래방%' or
         h_tag like '%파티%' or h_tag like '%PUB%' or h_tag like '%클럽%' or
         h_tag like '%게이밍%' or h_tag like '%PC%';
     </select>
     <select id="selectSearchFacVid" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_tag like '%넷플릭스%' or h_tag like '%빔프로젝트%' or
         h_tag like '%DVD%';
     </select>
     <select id="selectSearchFacHea" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_facilities like '%피트니스%' or h_tag like '%스파%' or
         h_tag like '%사우나%' or h_tag like '%피트니스%' or
         h_tag like '%헬스%' or h_tag like '%수영장%';
@@ -48,42 +43,45 @@
 
 
     <select id="selectSearchSerBre" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_offer like '%조식%' or h_tag like '%조식%';
     </select>
     <select id="selectSearchSerMor" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_offer like '%모닝콜%' or h_tag like '%모닝콜%'      
     </select>
     <select id="selectSearchSerLau" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_offer like '%세탁%' or h_tag like '%세탁%'
     </select>
 
 
     <select id="selectSearchSerTra" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_tag like '%공항%' or h_tag like '%역%' or h_tag like '%정류장%' or
         h_tag like '%ic%';
     </select>
     <select id="selectSearchSerStr" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_tag like '%길%' or h_tag like '%골목%' or
         h_tag like '%거리%' or h_tag like '%로%';
     </select>
     <select id="selectSearchSerFac" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_tag like '%스타디움%' or h_tag like '%하우스%' or
         h_tag like '%백화점%' or h_tag like '%아울렛%' or h_tag like '%병원%' or
         h_tag like '%83%' or h_tag like '%대학%';
     </select>
     <select id="selectSearchSerNat" resultType="com.greenart.vo.DaeguHotelVO">
-        select distinct h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
+        select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_tag like '%수성못%' or h_tag like '%공원%' or
         h_tag like '%산%' or h_tag like '%벚꽃%' or h_tag like '%수목원%' or
         h_tag like '%옥연지%' or h_tag like '%습지%' or h_tag like '%유원지%'
         or h_tag like '%월드%';
     </select>
 
-  
+    <select id="getHotelImageFileName" resultType="java.lang.String">
+        select himg_file_name from hotel_image 
+        where himg_uri = #{uri}
+    </select>
 </mapper>

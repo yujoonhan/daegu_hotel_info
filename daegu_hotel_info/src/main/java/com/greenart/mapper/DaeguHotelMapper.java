@@ -9,9 +9,12 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface DaeguHotelMapper {
     public void insertDaeguHotel(DaeguHotelVO vo);
-    public List<DaeguHotelVO> selectHotelName();
-    public List<DaeguHotelVO> selectSearch(String region, String offer, String facility);
+    public List<DaeguHotelVO> selectHotel();
+    public DaeguHotelVO selectHotelNameBySeq(Integer h_seq);
 
+    public String getHotelImageFileName(String uri);
+
+    
     public List<DaeguHotelVO> selectSearchFacDis();
     public List<DaeguHotelVO> selectSearchFacBus();
     public List<DaeguHotelVO> selectSearchFacEnt();

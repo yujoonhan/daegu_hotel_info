@@ -13,33 +13,23 @@
 <body>
     <div class="container">
         <div class="prod_area">
-            <!-- <table class="hotel_table">
-                <thead>
-                    <tr>
-                        <td>이름</td>
-                        <td>전화번호</td>
-                        <td>주소</td>
-                        <td>제공</td>
-                        <td>시설</td>
-                        <td>태그</td>
-                    </tr>
-                </thead>
-            </table>
-            <div class="pager_area">
-                <button id="page_prev">&lt;</button>
-                <span class="current">1 </span>/ <span class="total">9</span>
-                <button id="page_next">&gt;</button>
-            </div> -->
             <div class="recommand_wrap">
-                <a href="/detail?prod_seq=${item.h_seq}" class="recommand_item prod_item">
-                    <!-- <div class="img_area">
-                        <img src="/image/${item.pi_img_uri}">
-                    </div> -->
-                    <div class="text_area">
-                        <h2>${item.h_shop}</h2>
+                <c:forEach items="${hotel_list}" var="item">
+                    <div class="img_area">
+                        <!-- <img src="/image/${item.himg_uri}"> -->
                     </div>
-                </a>
+                    <a href="/detail?h_seq=${item.h_seq}" class="prod_item">
+                        <div class="text_area">
+                            <h2>${item.h_shop}</h2>
+                        </div>
+                    </a>
+                </c:forEach>
             </div>
+        </div>
+        <div class="pager_area">
+            <button id="page_prev">&lt;</button>
+            <span class="current">1 </span>/ <span class="total">9</span>
+            <button id="page_next">&gt;</button>
         </div>
     </div>
 </body>

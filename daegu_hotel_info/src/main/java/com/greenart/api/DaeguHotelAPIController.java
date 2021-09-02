@@ -19,9 +19,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -99,23 +97,8 @@ public class DaeguHotelAPIController {
     @GetMapping("/api/hotelName")
     public Map<String, Object> getHotelName(){
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectHotelName();
+        List<DaeguHotelVO> vo = service.selectHotel();
         resultMap.put("hotelName", vo);
-        return resultMap;
-    }
-
-    @GetMapping("/api/searchHotel/{region}&{offer}&{facility}")
-    public Map<String, Object> getSearchHotel(
-        @PathVariable @Nullable String region,
-        @PathVariable @Nullable String offer,
-        @PathVariable @Nullable String facility
-    ){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        region = region+"%";
-        offer = "%"+offer+"%";
-        facility = "%"+facility+"%";
-        List<DaeguHotelVO> vo = service.selectSearch(region, offer, facility);
-        resultMap.put("searchHotel", vo);
         return resultMap;
     }
 

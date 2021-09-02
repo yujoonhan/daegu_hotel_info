@@ -23,7 +23,9 @@
         </div>
         <div class="main_menu">
             <a href="/search">호텔 찾기</a>
-            <a href="#">내가 찜한 호텔</a>
+            <a href="/cart/${member.mi_id}?hGp3lVn=${member.mi_seq}" id="hotel_cart">
+                찜한 호텔
+            </a>
             <c:if test="${member == null}">
                 <a href="/login">로그인</a>
                 <a href="/join">회원가입</a>

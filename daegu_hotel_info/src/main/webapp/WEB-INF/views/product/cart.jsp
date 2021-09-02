@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="/assets/css/cart.css">
-    <script src="/assets/js/cart.js"></script> -->
+    <link rel="stylesheet" href="/assets/css/cart.css">
+    <script src="/assets/js/cart.js"></script>
 </head>
 <body>
-    <h1>장바구니</h1>
     <div class="container">
         <div class="prod_area">
+            <h1>찜 목록</h1>
             <table>
                 <thead>
                     <tr>
@@ -37,19 +37,19 @@
                         </tr>
                     </c:if>
                     <c:forEach items="${list}" var="item">
-                        <tr class="cart_prod" data-seq="${item.pi_seq}" data-mi-seq="${member.mi_seq}">
+                        <tr class="cart_prod" data-seq="${item.h_seq}" data-mi-seq="${member.mi_seq}">
                             <td>
                                 <input type="checkbox" data-seq="${item.pi_seq}" id="sel${item.pi_seq}">
                                 <label for="sel${item.pi_seq}">선택</label>
                             </td>
-                            <!-- <td>
-                                <img src="/image/${item.pi_img_uri}">
-                            </td> -->
                             <td>
-                                <p>[${item.seller_name}] ${item.pi_name}</p>
+                                <!-- <img src="/image/${item.pi_img_uri}"> -->
                             </td>
                             <td>
-                                <button class="delete" data-seq="${item.pi_seq}" data-user-seq="${member.mi_seq}">&times;</button>
+                                <p>${item.h_shop}</p>
+                            </td>
+                            <td>
+                                <button class="delete" data-seq="${item.h_seq}" data-user-seq="${member.mi_seq}">&times;</button>
                             </td>
                         </tr>
                     </c:forEach>
