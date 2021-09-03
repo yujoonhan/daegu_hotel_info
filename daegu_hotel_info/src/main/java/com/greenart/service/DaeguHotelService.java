@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.greenart.mapper.DaeguHotelMapper;
 import com.greenart.vo.DaeguHotelVO;
+import com.greenart.vo.HotelImageVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,13 +22,16 @@ public class DaeguHotelService {
     public DaeguHotelVO selectHotelNameBySeq(Integer h_seq) {
         return mapper.selectHotelNameBySeq(h_seq);
     }
-    
-    public String getHotelImageFileName(String uri){
-        return mapper.getHotelImageFileName(uri);
+
+    public void insertHotelImage(HotelImageVO vo){
+        mapper.insertHotelImage(vo);
     }
-
-
-
+    public String selectHotelImagePath(String uri){
+        return mapper.selectHotelImagePath(uri);
+    }
+    public void updateProduct(DaeguHotelVO vo){
+        mapper.updateProduct(vo);
+    }
 
     public List<DaeguHotelVO> selectSearchFacDis() {
         return mapper.selectSearchFacDis();

@@ -71,12 +71,6 @@ public class MemberAPIController {
         Map<String,Object> resultMap = service.loginMember(vo);
         session.setAttribute("member", resultMap.get("member"));
 
-        MemberInfoVO member = (MemberInfoVO)resultMap.get("member");
-        if(member != null){
-            Integer cart_cnt = hc_service.selectCount(member.getMi_seq());
-            session.setAttribute("cart_cnt", cart_cnt);
-        }
-
         return resultMap;
     }
 

@@ -22,12 +22,14 @@
     <div class="container">
         <div class="detail_container" data-prod-seq="${product.h_seq}">
             <div class="img_area">
-                <img src="/image/${product.himg_uri}">
+                <img src="/image/${product.h_img_uri}">
             </div>
             <div class="text_area">
-                <h2>${product.h_shop}</h2>
                 <table class="detail_info_table">
                     <tbody>
+                        <tr>
+                            <td>${product.h_shop}</td>
+                        </tr>
                         <tr>
                             <td>주소</td>
                             <td>${product.h_address}</td>
@@ -49,10 +51,21 @@
                             <td>${product.h_tag}</td>
                         </tr>
                     </tbody>
+                    <tbody  id="product_tbody">
+                        
+                    </tbody>
                 </table>
-            </div>
-            <div class="buttons">
                 <button id="cart_bag">찜하기</button>
+            </div>
+            <div class="img_form_div">
+                <span id="img_preview">
+                </span>
+                <form id="image_form">
+                    <input type="file" accept="image/gif, image/jpeg, image/png" name="file" value="호텔이미지 선택">
+                    <button type="button" id="img_save" data-seq=${product.h_seq}>사진 확인</button>
+                    <button type="button" id="img_delete" disabled>삭제</button>
+                    <button id="save">사진 등록하기</button>
+                </form>
             </div>
         </div>
     </div>

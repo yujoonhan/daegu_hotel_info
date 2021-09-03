@@ -15,6 +15,21 @@
         select * from daegu_hotel_info where h_seq = #{h_seq};
     </select>
 
+    <insert id="insertHotelImage">
+        insert into hotel_image
+            (himg_file_name, himg_uri, himg_size)
+        values
+            (#{himg_file_name}, #{himg_uri}, #{himg_size});
+    </insert>
+    <select id="selectHotelImagePath" resultType="java.lang.String">
+        select himg_file_name from hotel_image where himg_uri=#{uri} order by himg_seq desc limit 1
+    </select>
+    <update id="updateProduct">
+        update daegu_hotel_info set
+            h_img_uri = #{h_img_uri}
+        where h_seq = #{h_seq}
+    </update>
+
     <select id="selectSearchFacDis" resultType="com.greenart.vo.DaeguHotelVO">
         select h_shop, h_tel, h_address, h_offer, h_facilities, h_tag  from daegu_hotel_info
         where h_facilities like '%장애인%' or h_tag like '%장애인%';
@@ -80,8 +95,8 @@
         or h_tag like '%월드%';
     </select>
 
-    <select id="getHotelImageFileName" resultType="java.lang.String">
+    <!-- <select id="getHotelImageFileName" resultType="java.lang.String">
         select himg_file_name from hotel_image 
         where himg_uri = #{uri}
-    </select>
+    </select> -->
 </mapper>

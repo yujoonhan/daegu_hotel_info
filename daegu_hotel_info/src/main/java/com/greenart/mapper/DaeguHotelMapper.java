@@ -3,6 +3,7 @@ package com.greenart.mapper;
 import java.util.List;
 
 import com.greenart.vo.DaeguHotelVO;
+import com.greenart.vo.HotelImageVO;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,9 +13,11 @@ public interface DaeguHotelMapper {
     public List<DaeguHotelVO> selectHotel();
     public DaeguHotelVO selectHotelNameBySeq(Integer h_seq);
 
-    public String getHotelImageFileName(String uri);
-
+    public void insertHotelImage(HotelImageVO vo);
+    public String selectHotelImagePath(String uri);
+    public void updateProduct(DaeguHotelVO vo);
     
+
     public List<DaeguHotelVO> selectSearchFacDis();
     public List<DaeguHotelVO> selectSearchFacBus();
     public List<DaeguHotelVO> selectSearchFacEnt();

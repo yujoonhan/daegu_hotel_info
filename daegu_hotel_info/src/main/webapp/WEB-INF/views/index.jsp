@@ -8,7 +8,7 @@
     <title>대구 호텔 정보</title>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- <link rel="stylesheet" href="/assets/css/index.css"> -->
-    <!-- <script src="/assets/js/index.js"></script> -->
+    <script src="/assets/js/index.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,6 @@
             <div class="recommand_wrap">
                 <c:forEach items="${hotel_list}" var="item">
                     <div class="img_area">
-                        <!-- <img src="/image/${item.himg_uri}"> -->
                     </div>
                     <a href="/detail?h_seq=${item.h_seq}" class="prod_item">
                         <div class="text_area">
@@ -25,11 +24,6 @@
                     </a>
                 </c:forEach>
             </div>
-        </div>
-        <div class="pager_area">
-            <button id="page_prev">&lt;</button>
-            <span class="current">1 </span>/ <span class="total">9</span>
-            <button id="page_next">&gt;</button>
         </div>
     </div>
 </body>

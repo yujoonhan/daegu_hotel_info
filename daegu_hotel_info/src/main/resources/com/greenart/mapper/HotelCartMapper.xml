@@ -3,19 +3,15 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.greenart.mapper.HotelCartMapper">
     <insert id="insertProduct">
-        insert into hotel_cart
+        INSERT INTO hotel_cart
             (hc_mi_seq, hc_h_seq)
-        values
-            (#{hc_mi_seq}, #{hc_h_seq})
+        VALUES
+            (#{hc_mi_seq}, #{hc_h_seq});
     </insert>
     <select id="selectCartProductCnt" resultType="java.lang.Integer">
         select count(*) from hotel_cart 
         where hc_mi_seq=#{hc_mi_seq} and hc_h_seq=#{hc_h_seq}
     </select>
-    <update id="updateCartProductCnt">
-        update hotel_cart set hc_count = hc_count + #{hc_count}
-        where hc_mi_seq = #{hc_mi_seq} and hc_pi_seq = #{hc_pi_seq}
-    </update>
     <select id="selectCount" resultType="java.lang.Integer">
         select count(*) from hotel_cart where hc_mi_seq = #{mi_seq}
     </select>
@@ -30,8 +26,30 @@
         delete from hotel_cart
         where hc_mi_seq = #{mi_seq} and hc_h_seq = #{h_seq}
     </delete>
-    <update id="changeProductCnt">
-        update hotel_cart set hc_count=#{cnt} where hc_mi_seq=#{mi_seq}
-        and hc_pi_seq=#{pi_seq}
+
+    <select id="selectCartBySeq" resultType="java.lang.Integer">
+        select count(*) from hotel_cart where hc_h_seq=#{seq}
+    </select>
+
+    <insert id="insertHotelImage">
+        insert into hotel_image
+            (himg_file_name, himg_uri, himg_size)
+        values
+            (#{himg_file_name}, #{himg_uri}, #{himg_size});
+    </insert>
+    <select id="selectHotelImagePath" resultType="java.lang.String">
+        select himg_file_name from hotel_image where himg_uri=#{uri} order by himg_seq desc limit 1
+    </select>
+    <update id="updateProduct">
+        update daegu_hotel_info set
+            h_seq = #{h_seq},
+            h_shop = #{h_shop},
+            h_tel = #{h_tel},
+            h_address = #{h_address},
+            h_offer = #{h_offer},
+            h_facilities = #{h_facilities},
+            h_tag = #{h_tag},
+            h_img_uri = #{h_img_uri}
+        where h_seq = #{h_seq}
     </update>
 </mapper>

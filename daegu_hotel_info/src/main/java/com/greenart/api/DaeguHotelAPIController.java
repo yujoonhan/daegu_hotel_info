@@ -19,7 +19,11 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -97,8 +101,18 @@ public class DaeguHotelAPIController {
     @GetMapping("/api/hotelName")
     public Map<String, Object> getHotelName(){
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectHotel();
-        resultMap.put("hotelName", vo);
+        List<DaeguHotelVO> list = service.selectHotel();
+        resultMap.put("data", list);
+        return resultMap;
+    }
+
+    @PatchMapping("/hotel/api/update")
+    public Map<String, Object> postHotelUpdateAPI(@RequestBody DaeguHotelVO vo){
+        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
+        service.updateProduct(vo);
+        resultMap.put("status", true);
+        resultMap.put("message", "등록되었습니다");
+
         return resultMap;
     }
 

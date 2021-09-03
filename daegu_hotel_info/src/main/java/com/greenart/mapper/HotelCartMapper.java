@@ -11,10 +11,9 @@ import org.apache.ibatis.annotations.Mapper;
 public interface HotelCartMapper {
     public void insertProduct(HotelCartVO vo);
     public Integer selectCartProductCnt(HotelCartVO vo);
-    public void updateCartProductCnt(HotelCartVO vo);
-    public Integer selectCount(Integer mi_seq);
     public List<DaeguHotelVO> selectCartProducts(Integer mi_seq);
 
     public void deleteCartProduct(Integer h_seq, Integer mi_seq);
-    public void changeProductCnt(Integer hi_seq, Integer mi_seq, Integer cnt);
+    public Integer selectCartBySeq(Integer seq);
+
 }

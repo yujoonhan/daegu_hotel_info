@@ -12,6 +12,5 @@ public class DaeguHotelVO {
     private String h_facilities;
     private String h_tag;
 
-    private String himg_uri;
-
+    private String h_img_uri;
 }
