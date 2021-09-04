@@ -12,8 +12,26 @@
 </head>
 <body>
     <div class="container">
-        <div class="prod_area">
-            <div class="recommand_wrap">
+        <div class="product_list list">
+            <table id="product_table">
+                <thead>
+                    <tr>
+                        <td>호텔 이미지</td>
+                        <td>호텔이름</td>
+                        <td>전화번호</td>
+                        <td>주소</td>
+                        <td>제공</td>
+                        <td>시설</td>
+                        <td>태그</td>
+                    </tr>
+                </thead>
+                <tbody id="product_tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+            <!-- <div class="recommand_wrap">
                 <c:forEach items="${hotel_list}" var="item">
                     <div class="img_area">
                     </div>
@@ -23,8 +41,7 @@
                         </div>
                     </a>
                 </c:forEach>
-            </div>
-        </div>
-    </div>
+            </div> -->
+
 </body>
 </html>
