@@ -1,4 +1,6 @@
 $(function(){
+
+    // 찜하기
     $("#cart_bag").click(function(){
         if(memberInfo.seq == "" || memberInfo.seq == null || memberInfo.seq == undefined){
             alert("로그인 후 사용사실 수 있습니다");
@@ -20,9 +22,10 @@ $(function(){
         })
     })
 
+    // db의 daegu_hotel_info 테이블에 저장
     $("#save").click(function(){
         let data = {
-            h_seq:$(this).attr("save-seq"),
+            h_seq:productInfo.p_seq,
             h_img_uri:$("#img_preview").attr("img-uri")
         };
         $.ajax({
@@ -38,6 +41,7 @@ $(function(){
         })
     })
     
+    // 선택한 이미지를 확인, db의 hotel_image 테이블에 저장
     $("#img_save").click(function(){
         let form = $("#image_form");
         let formData = new FormData(form[0]);
@@ -61,6 +65,7 @@ $(function(){
         })
     })
     
+    // 선택한 이미지 삭제
     $("#img_delete").click(function(){
         let uri = $("#img_preview").attr("img_uri");
         $("#img_preview").html("");

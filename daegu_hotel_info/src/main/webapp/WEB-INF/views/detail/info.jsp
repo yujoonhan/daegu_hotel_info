@@ -16,6 +16,9 @@
             id:"${member.mi_id}",
             name:"${member.mi_name}"
         }
+        let productInfo = {
+            p_seq:"${product.h_seq}",
+        }
     </script>
 </head>
 <body>
@@ -25,35 +28,33 @@
                 <img src="/image/${product.h_img_uri}">
             </div>
             <div class="text_area">
-                <table class="detail_info_table">
-                    <tbody>
-                        <tr>
-                            <td>${product.h_shop}</td>
-                        </tr>
-                        <tr>
-                            <td>주소</td>
-                            <td>${product.h_address}</td>
-                        </tr>
-                        <tr>
-                            <td>전화번호</td>
-                            <td>${product.h_tel}</td>
-                        </tr>
-                        <tr>
-                            <td>제공</td>
-                            <td>${product.h_offer}</td>
-                        </tr>
-                        <tr>
-                            <td>시설</td>
-                            <td>${product.h_facilities}</td>
-                        </tr>
-                        <tr>
-                            <td>태그</td>
-                            <td>${product.h_tag}</td>
-                        </tr>
-                    </tbody>
-                    <tbody  id="product_tbody">
-                        
-                    </tbody>
+                <div class="product_list list">
+                    <table id="product_table">
+                        <thead>
+                            <tr>
+                                <td>${product.h_shop}</td>
+                            </tr>
+                            <tr>
+                                <td>${product.h_address}</td>
+                            </tr>
+                            <tr>
+                                <td>${product.h_tel}</td>
+                            </tr>
+                            <tr>
+                                <td>${product.h_offer}</td>
+                            </tr>
+                            <tr>
+                                <td>${product.h_facilities}</td>
+                            </tr>
+                            <tr>
+                                <td>${product.h_tag}</td>
+                            </tr>
+                        </thead>
+                        <tbody id="product_tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
                 </table>
                 <button id="cart_bag">찜하기</button>
             </div>
