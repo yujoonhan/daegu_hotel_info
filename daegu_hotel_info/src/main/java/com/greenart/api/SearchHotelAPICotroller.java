@@ -4,105 +4,65 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.greenart.service.DaeguHotelService;
+import com.greenart.service.SearchHotelService;
 import com.greenart.vo.DaeguHotelVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SearchHotelAPICotroller {
     @Autowired
-    DaeguHotelService service;
-    
-    @GetMapping("/api/searchDis")
-    public Map<String, Object> getSearchDis(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchFacDis();
-        resultMap.put("searchDis", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchBus")
-    public Map<String, Object> getSearchBus(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchFacBus();
-        resultMap.put("searchBus", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchEnt")
-    public Map<String, Object> getSearchEnt(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchFacEnt();
-        resultMap.put("searchEnt", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchVid")
-    public Map<String, Object> getSearchVid(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchFacVid();
-        resultMap.put("searchVid", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchHea")
-    public Map<String, Object> getSearchHea(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchFacHea();
-        resultMap.put("searchHea", vo);
-        return resultMap;
-    }
+    SearchHotelService service;
 
-
-    @GetMapping("/api/searchBre")
-    public Map<String, Object> getSearchBre(){
+    @GetMapping("/api/search/add_list")
+    public Map<String, Object> getAddList(
+        @RequestParam @Nullable String keyword
+    ) {
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerBre();
-        resultMap.put("searchBre", vo);
+        List<DaeguHotelVO> list = service.selectSearchAdd(keyword);
+        resultMap.put("add_list", list);
         return resultMap;
     }
-    @GetMapping("/api/searchMor")
-    public Map<String, Object> getSearchMor(){
+    @GetMapping("/api/search/off_list")
+    public Map<String, Object> getOffList(
+        @RequestParam @Nullable String keyword
+    ) {
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerMor();
-        resultMap.put("searchMor", vo);
+        List<DaeguHotelVO> list = service.selectSearchOff(keyword);
+        resultMap.put("off_list", list);
         return resultMap;
     }
-    @GetMapping("/api/searchLau")
-    public Map<String, Object> getSearchLau(){
+    @GetMapping("/api/search/fac_list")
+    public Map<String, Object> getFacList(
+        @RequestParam @Nullable String keyword
+    ) {
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerLau();
-        resultMap.put("searchLau", vo);
+        List<DaeguHotelVO> list = service.selectSearchFac(keyword);
+        resultMap.put("fac_list", list);
+        return resultMap;
+    }
+    @GetMapping("/api/search/nam_list")
+    public Map<String, Object> getNamList(
+        @RequestParam @Nullable String keyword
+    ) {
+        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
+        List<DaeguHotelVO> list = service.selectSearchNam(keyword);
+        resultMap.put("nam_list", list);
+        return resultMap;
+    }
+    @GetMapping("/api/search/tag_list")
+    public Map<String, Object> getTagList(
+        @RequestParam @Nullable String keyword
+    ) {
+        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
+        List<DaeguHotelVO> list = service.selectSearchTag(keyword);
+        resultMap.put("tag_list", list);
         return resultMap;
     }
     
-    
-    @GetMapping("/api/searchTra")
-    public Map<String, Object> getSearchTra(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerTra();
-        resultMap.put("searchTra", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchStr")
-    public Map<String, Object> getSearchStr(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerStr();
-        resultMap.put("searchStr", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchFac")
-    public Map<String, Object> getSearchFac(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerFac();
-        resultMap.put("searchFac", vo);
-        return resultMap;
-    }
-    @GetMapping("/api/searchNat")
-    public Map<String, Object> getSearchNat(){
-        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        List<DaeguHotelVO> vo = service.selectSearchSerNat();
-        resultMap.put("searchNat", vo);
-        return resultMap;
-    }
 
 }

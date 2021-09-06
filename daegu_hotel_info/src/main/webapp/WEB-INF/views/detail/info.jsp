@@ -56,7 +56,7 @@
                     </table>
                 </div>
                 </table>
-                <button id="cart_bag">찜하기</button>
+                <button id="cart_bag">관심 목록에 추가</button>
             </div>
             <div class="img_form_div">
                 <span id="img_preview">

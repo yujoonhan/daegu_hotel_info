@@ -24,7 +24,7 @@
         <div class="main_menu">
             <a href="/search">호텔 찾기</a>
             <a href="/cart/${member.mi_id}?hGp3lVn=${member.mi_seq}" id="hotel_cart">
-                관심 호텔
+                내 관심 호텔
             </a>
             <c:if test="${member == null}">
                 <a href="/login">로그인</a>

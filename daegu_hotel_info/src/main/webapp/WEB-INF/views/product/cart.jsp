@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>대구 호텔 정보 :: 관심 목록</title>
     <link rel="stylesheet" href="/assets/css/cart.css">
     <script src="/assets/js/cart.js"></script>
 </head>
@@ -23,16 +23,14 @@
                     <c:forEach items="${list}" var="item">
                         <tr class="cart_prod" data-seq="${item.h_seq}" data-mi-seq="${member.mi_seq}">
                             <td>
-                                <h2>이미지 자리</h2>
-                            </td>
-                            <td>
                                 <a href="/detail?h_seq=${item.h_seq}" class="prod_item">
+                                    <div class="img_area">
+                                        <img src="/image/${item.h_img_uri}">
+                                    </div>
                                     <div class="text_area">
                                         <h2>${item.h_shop}</h2>
                                     </div>
                                 </a>
-                            </td>
-                            <td>
                                 <button class="delete" data-seq="${item.h_seq}" data-user-seq="${member.mi_seq}">&times;</button>
                             </td>
                         </tr>

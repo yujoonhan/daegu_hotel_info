@@ -17,20 +17,4 @@ public interface DaeguHotelMapper {
     public String selectHotelImagePath(String uri);
     public void updateProduct(DaeguHotelVO vo);
     
-
-    public List<DaeguHotelVO> selectSearchFacDis();
-    public List<DaeguHotelVO> selectSearchFacBus();
-    public List<DaeguHotelVO> selectSearchFacEnt();
-    public List<DaeguHotelVO> selectSearchFacVid();
-    public List<DaeguHotelVO> selectSearchFacHea();
-
-    public List<DaeguHotelVO> selectSearchSerBre();
-    public List<DaeguHotelVO> selectSearchSerMor();
-    public List<DaeguHotelVO> selectSearchSerLau();
-    
-    public List<DaeguHotelVO> selectSearchSerTra();
-    public List<DaeguHotelVO> selectSearchSerStr();
-    public List<DaeguHotelVO> selectSearchSerFac();
-    public List<DaeguHotelVO> selectSearchSerNat();
-    
 }

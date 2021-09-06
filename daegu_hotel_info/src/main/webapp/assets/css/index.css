@@ -14,3 +14,10 @@
 .dashboard_content:first-child {padding-top: 0;}
 .hotel-tbody {display: none;}
 .hotel-tbody.active {display: table-row-group;}
+
+.img_area img{
+    width: 300px;
+}
+.hotel-tbody img{
+    width: 300px;
+}
