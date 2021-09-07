@@ -26,4 +26,9 @@ public class MainController {
         return "/search/search";
     }
 
+    @GetMapping("/hotel")
+    public String getHotel() {
+        return "/hotel/hotel";
+    }
+
 }

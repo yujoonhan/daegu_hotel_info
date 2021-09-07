@@ -33,7 +33,7 @@ public class HotelCartAPIController {
             resultMap.put("message", "이미 관심 목록에 있습니다.");
             return resultMap;
         }
-        service.insertProduct(vo);
+        service.insertCartHotel(vo);
         
         resultMap.put("status", true);
         resultMap.put("message", "관심 목록에 추가되었습니다");
@@ -46,7 +46,7 @@ public class HotelCartAPIController {
         @RequestParam Integer h_seq, @RequestParam Integer mi_seq, HttpSession session
     ){
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        service.deleteCartProduct(h_seq, mi_seq);
+        service.deleteCartHotel(h_seq, mi_seq);
         resultMap.put("status", true);
         resultMap.put("message", "삭제되었습니다");
 

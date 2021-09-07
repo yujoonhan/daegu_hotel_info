@@ -11,9 +11,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="prod_area">
-            <h1>관심 목록</h1>
+        <div class="hotel_list_area">
+            <h1>나의 관심 호텔 목록</h1>
             <table>
+                <thead>
+                    <td></td>
+                    <td>이미지</td>
+                    <td>이름</td>
+                    <td>주소</td>
+                    <td>전화번호</td>
+                    <td>제공</td>
+                    <td>시설</td>
+                    <td>태그</td>
+                </thead>
                 <tbody>
                     <c:if test="${list.size() == 0}">
                         <tr>
@@ -21,17 +31,19 @@
                         </tr>
                     </c:if>
                     <c:forEach items="${list}" var="item">
-                        <tr class="cart_prod" data-seq="${item.h_seq}" data-mi-seq="${member.mi_seq}">
+                        <tr class="cart_hotel" data-seq="${item.h_seq}" data-mi-seq="${member.mi_seq}">
                             <td>
-                                <a href="/detail?h_seq=${item.h_seq}" class="prod_item">
-                                    <div class="img_area">
-                                        <img src="/image/${item.h_img_uri}">
-                                    </div>
-                                    <div class="text_area">
-                                        <h2>${item.h_shop}</h2>
-                                    </div>
+                                <a href="/detail?h_seq=${item.h_seq}" class="hotel_item">
+                                    <td><img src="/image/${item.h_img_uri}"></td>
+                                    <td>${item.h_shop}</td>
+                                    <td>${item.h_address}</td>
+                                    <td>${item.h_tel}</td>
+                                    <td>${item.h_offer}</td>
+                                    <td>${item.h_facilities}</td>
+                                    <td>${item.h_tag}</td>
+                                    <td><button class="delete" data-seq="${item.h_seq}" data-user-seq="${member.mi_seq}">삭제</button></td>
                                 </a>
-                                <button class="delete" data-seq="${item.h_seq}" data-user-seq="${member.mi_seq}">&times;</button>
+                                
                             </td>
                         </tr>
                     </c:forEach>

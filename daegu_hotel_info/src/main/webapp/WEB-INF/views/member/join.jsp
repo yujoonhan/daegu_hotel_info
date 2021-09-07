@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/member_join.css">
 </head>
 <body>
-    <div class="prod_area">
+    <div class="hotel_list_area">
         <h1 class="title">회원가입</h1>
         <table class="table">
             <tbody>

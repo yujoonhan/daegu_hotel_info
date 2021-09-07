@@ -33,7 +33,7 @@ public class HotelCartController {
         if(member_id == null){
             return "redirect:/login";
         }
-        List<DaeguHotelVO> list = service.selectCartProducts(hGp3lVn);
+        List<DaeguHotelVO> list = service.selectCartHotels(hGp3lVn);
         model.addAttribute("list", list);
         return "/product/cart";
     }

@@ -25,7 +25,7 @@ $(function(){
     // db의 daegu_hotel_info 테이블에 저장
     $("#save").click(function(){
         let data = {
-            h_seq:productInfo.p_seq,
+            h_seq:hotelInfo.h_seq,
             h_img_uri:$("#img_preview").attr("img-uri")
         };
         $.ajax({
@@ -77,4 +77,5 @@ $(function(){
 
         alert("삭제되었습니다");
     })
+
 })

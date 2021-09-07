@@ -15,7 +15,7 @@
     </script>
 </head>
 <body>
-    <div class="prod_area">
+    <div class="hotel_list_area">
         <h1 class="title">로그인</h1>
         <table class="table">
             <tbody>

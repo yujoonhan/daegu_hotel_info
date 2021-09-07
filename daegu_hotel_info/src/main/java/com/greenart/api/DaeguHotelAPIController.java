@@ -109,7 +109,7 @@ public class DaeguHotelAPIController {
     @PatchMapping("/hotel/api/update")
     public Map<String, Object> postHotelUpdateAPI(@RequestBody DaeguHotelVO vo){
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
-        service.updateProduct(vo);
+        service.updateHotelImage(vo);
         resultMap.put("status", true);
         resultMap.put("message", "등록되었습니다");
 

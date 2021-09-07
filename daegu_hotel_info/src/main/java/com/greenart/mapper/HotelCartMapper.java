@@ -9,11 +9,10 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface HotelCartMapper {
-    public void insertProduct(HotelCartVO vo);
-    public Integer selectCartProductCnt(HotelCartVO vo);
-    public List<DaeguHotelVO> selectCartProducts(Integer mi_seq);
+    public void insertCartHotel(HotelCartVO vo);
+    public List<DaeguHotelVO> selectCartHotels(Integer mi_seq);
 
-    public void deleteCartProduct(Integer h_seq, Integer mi_seq);
+    public void deleteCartHotel(Integer h_seq, Integer mi_seq);
     public Integer selectCartBySeq(Integer seq);
 
 }

@@ -13,16 +13,16 @@ import org.springframework.stereotype.Service;
 public class HotelCartService {
     @Autowired HotelCartMapper mapper;
 
-    public void insertProduct(HotelCartVO vo){
-        mapper.insertProduct(vo);
+    public void insertCartHotel(HotelCartVO vo){
+        mapper.insertCartHotel(vo);
     }
 
-    public List<DaeguHotelVO> selectCartProducts(Integer mi_seq){
-        return mapper.selectCartProducts(mi_seq);
+    public List<DaeguHotelVO> selectCartHotels(Integer mi_seq){
+        return mapper.selectCartHotels(mi_seq);
     }
 
-    public void deleteCartProduct(Integer h_seq, Integer mi_seq){
-        mapper.deleteCartProduct(h_seq, mi_seq);
+    public void deleteCartHotel(Integer h_seq, Integer mi_seq){
+        mapper.deleteCartHotel(h_seq, mi_seq);
     }
 
     public boolean isDuplicatedCart(Integer seq) {

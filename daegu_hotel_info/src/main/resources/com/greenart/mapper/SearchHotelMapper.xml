@@ -2,21 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.greenart.mapper.SearchHotelMapper">
-    <select id="selectSearchAdd" resultType="com.greenart.vo.DaeguHotelVO">
+    <select id="selectSearchNam" resultType="com.greenart.vo.DaeguHotelVO">
+        select * from daegu_hotel_info
+        where h_shop LIKE #{keyword}
+    </select>
+    <select id="selectSearchAdr" resultType="com.greenart.vo.DaeguHotelVO">
         select * from daegu_hotel_info
         where h_address LIKE #{keyword}
     </select>
-    <select id="selectSearchOff" resultType="com.greenart.vo.DaeguHotelVO">
+    <select id="selectSearchOfr" resultType="com.greenart.vo.DaeguHotelVO">
         select * from daegu_hotel_info
         where h_offer LIKE #{keyword}
     </select>
     <select id="selectSearchFac" resultType="com.greenart.vo.DaeguHotelVO">
         select * from daegu_hotel_info
         where h_facilities LIKE #{keyword}
-    </select>
-    <select id="selectSearchNam" resultType="com.greenart.vo.DaeguHotelVO">
-        select * from daegu_hotel_info
-        where h_shop LIKE #{keyword}
     </select>
     <select id="selectSearchTag" resultType="com.greenart.vo.DaeguHotelVO">
         select * from daegu_hotel_info

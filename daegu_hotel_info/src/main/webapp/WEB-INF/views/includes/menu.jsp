@@ -19,9 +19,12 @@
 <body>
     <div class="container">
         <div class="banner_area">
-            <a href="/">대구 호텔 정보</a>
+            <a href="/">
+                <img src="/assets/images/hotel_logo_256.png">
+            </a>
         </div>
         <div class="main_menu">
+            <a href="/hotel">대구의 호텔 정보</a>
             <a href="/search">호텔 찾기</a>
             <a href="/cart/${member.mi_id}?hGp3lVn=${member.mi_seq}" id="hotel_cart">
                 내 관심 호텔

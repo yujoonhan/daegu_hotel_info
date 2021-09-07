@@ -29,7 +29,7 @@ public class DaeguHotelService {
     public String selectHotelImagePath(String uri){
         return mapper.selectHotelImagePath(uri);
     }
-    public void updateProduct(DaeguHotelVO vo){
-        mapper.updateProduct(vo);
+    public void updateHotelImage(DaeguHotelVO vo){
+        mapper.updateHotelImage(vo);
     }
 }

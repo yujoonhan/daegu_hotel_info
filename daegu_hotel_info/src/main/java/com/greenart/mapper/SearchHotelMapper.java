@@ -8,9 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface SearchHotelMapper {
-    public List<DaeguHotelVO> selectSearchAdd(String keyword);
-    public List<DaeguHotelVO> selectSearchOff(String keyword);
-    public List<DaeguHotelVO> selectSearchFac(String keyword);
     public List<DaeguHotelVO> selectSearchNam(String keyword);
+    public List<DaeguHotelVO> selectSearchAdr(String keyword);
+    public List<DaeguHotelVO> selectSearchOfr(String keyword);
+    public List<DaeguHotelVO> selectSearchFac(String keyword);
     public List<DaeguHotelVO> selectSearchTag(String keyword);
 }

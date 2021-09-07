@@ -12,25 +12,25 @@ import org.springframework.stereotype.Service;
 public class SearchHotelService {
     @Autowired
     SearchHotelMapper mapper;
-    public List<DaeguHotelVO> selectSearchAdd(String keyword){
+    public List<DaeguHotelVO> selectSearchNam(String keyword){
         if(keyword == null){keyword = "%%";}
         else if(keyword != null) {keyword = "%"+keyword+"%";}
-        return mapper.selectSearchAdd(keyword);
+        return mapper.selectSearchNam(keyword);
     }
-    public List<DaeguHotelVO> selectSearchOff(String keyword){
+    public List<DaeguHotelVO> selectSearchAdr(String keyword){
         if(keyword == null){keyword = "%%";}
         else if(keyword != null) {keyword = "%"+keyword+"%";}
-        return mapper.selectSearchOff(keyword);
+        return mapper.selectSearchAdr(keyword);
+    }
+    public List<DaeguHotelVO> selectSearchOfr(String keyword){
+        if(keyword == null){keyword = "%%";}
+        else if(keyword != null) {keyword = "%"+keyword+"%";}
+        return mapper.selectSearchOfr(keyword);
     }
     public List<DaeguHotelVO> selectSearchFac(String keyword){
         if(keyword == null){keyword = "%%";}
         else if(keyword != null) {keyword = "%"+keyword+"%";}
         return mapper.selectSearchFac(keyword);
-    }
-    public List<DaeguHotelVO> selectSearchNam(String keyword){
-        if(keyword == null){keyword = "%%";}
-        else if(keyword != null) {keyword = "%"+keyword+"%";}
-        return mapper.selectSearchNam(keyword);
     }
     public List<DaeguHotelVO> selectSearchTag(String keyword){
         if(keyword == null){keyword = "%%";}

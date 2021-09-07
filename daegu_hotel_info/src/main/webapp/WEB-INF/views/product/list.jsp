@@ -13,9 +13,9 @@
     <c:if test="${list.size() == 0}">
         <p class="nodata">등록된 호텔이 없습니다</p>
     </c:if>
-    <div class="prod_area">
+    <div class="hotel_list_area">
         <c:forEach items="${list}" var="item">
-            <a href="/detail?prod_seq=${item.h_seq}">
+            <a href="/detail?hotel_seq=${item.h_seq}">
                 <span class="name">${item.h_shop}</span>
             </a>
         </c:forEach>

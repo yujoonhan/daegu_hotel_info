@@ -2,27 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.greenart.mapper.HotelCartMapper">
-    <insert id="insertProduct">
+    <insert id="insertCartHotel">
         INSERT INTO hotel_cart
             (hc_mi_seq, hc_h_seq)
         VALUES
             (#{hc_mi_seq}, #{hc_h_seq});
     </insert>
-    <select id="selectCartProductCnt" resultType="java.lang.Integer">
-        select count(*) from hotel_cart 
-        where hc_mi_seq=#{hc_mi_seq} and hc_h_seq=#{hc_h_seq}
-    </select>
     <select id="selectCount" resultType="java.lang.Integer">
         select count(*) from hotel_cart where hc_mi_seq = #{mi_seq}
     </select>
-    <select id="selectCartProducts" resultType="com.greenart.vo.DaeguHotelVO">
+    <select id="selectCartHotels" resultType="com.greenart.vo.DaeguHotelVO">
         select * from
         (
 	        select * from hotel_cart where hc_mi_seq = #{mi_seq}
         ) a inner join daegu_hotel_info b on a.hc_h_seq = b.h_seq
     </select>
 
-    <delete id="deleteCartProduct">
+    <delete id="deleteCartHotel">
         delete from hotel_cart
         where hc_mi_seq = #{mi_seq} and hc_h_seq = #{h_seq}
     </delete>
@@ -40,7 +36,7 @@
     <select id="selectHotelImagePath" resultType="java.lang.String">
         select himg_file_name from hotel_image where himg_uri=#{uri} order by himg_seq desc limit 1
     </select>
-    <update id="updateProduct">
+    <update id="updateHotelImage">
         update daegu_hotel_info set
             h_seq = #{h_seq},
             h_shop = #{h_shop},

@@ -15,6 +15,6 @@ public interface DaeguHotelMapper {
 
     public void insertHotelImage(HotelImageVO vo);
     public String selectHotelImagePath(String uri);
-    public void updateProduct(DaeguHotelVO vo);
+    public void updateHotelImage(DaeguHotelVO vo);
     
 }
