@@ -24,7 +24,7 @@
             </a>
         </div>
         <div class="main_menu">
-            <a href="/hotel">대구의 호텔 정보</a>
+            <a href="/tour">주변 관광 정보</a>
             <a href="/search">호텔 찾기</a>
             <a href="/cart/${member.mi_id}?hGp3lVn=${member.mi_seq}" id="hotel_cart">
                 내 관심 호텔

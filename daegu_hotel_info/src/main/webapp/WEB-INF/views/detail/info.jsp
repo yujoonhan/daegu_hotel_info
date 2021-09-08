@@ -19,6 +19,7 @@
         }
         let hotelInfo = {
             h_seq:"${product.h_seq}",
+            h_address:"${product.h_address}"
         }
     </script>
 </head>
@@ -109,6 +110,9 @@
                     }
                 })
             </script>
+            <div class="tour_info">
+
+            </div>
         </div>
     </div>
 </body>

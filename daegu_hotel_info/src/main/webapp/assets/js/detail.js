@@ -78,4 +78,18 @@ $(function(){
         alert("삭제되었습니다");
     })
 
+    // 호텔 지역(구 기준)과 같은 관광 지역 찾기
+    let url = "/api/tour?h_seq="+hotelInfo.h_seq
+    let region = hotelInfo.h_address
+    let region_s = region.substr(0, 2)
+    url += "&region="+region_s
+    $.ajax({
+        url:url,
+        type:"get",
+        success:function(r){
+            console.log(r);
+            console.log(region_s);
+        }
+    })
+
 })

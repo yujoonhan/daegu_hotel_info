@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greenart.mapper.DaeguTourMapper">
+    <insert id="insertDaeguTour">
+        INSERT INTO daegu_tour
+            (t_address, t_contents, t_name, t_tel)
+        VALUES
+            (#{t_address}, #{t_contents}, #{t_name}, #{t_tel});
+    </insert>
+
+    <select id="selectTourByAddress" resultType="com.greenart.vo.TourRegionVO">
+        select  * from (
+            select h_shop, h_address from daegu_hotel_info 
+            where h_seq = #{h_seq}
+        ) as a inner join (
+            select t_address, t_contents, t_name, t_tel from daegu_tour
+            where t_address like #{region}
+        ) as b
+    </select>
+</mapper>
