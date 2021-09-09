@@ -1,6 +1,6 @@
 $(function(){
     function getHotelData(select, keyword){
-        $("#hotel_search_list").html("");
+        $(".hotel_search_list").html("");
         
         let url = "/api/search/"+select;
         if(keyword == undefined || keyword == null){
@@ -42,10 +42,6 @@ $(function(){
         getHotelData(select, keyword);
     })
     
-    // $("#search_keyword").keyup(function(){
-    //     let select = $("#search_select option:selected").val();
-    //     let keyword = $("#search_keyword").val();
-    //     getHotelData(select, keyword);
-    // })
+
 
 })

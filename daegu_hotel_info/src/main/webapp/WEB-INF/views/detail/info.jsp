@@ -5,8 +5,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/assets/js/detail.js"></script>
@@ -101,7 +99,7 @@
                     
                         // 인포윈도우로 장소에 대한 설명을 표시합니다
                         var infowindow = new kakao.maps.InfoWindow({
-                            content: '<div style="width:150px;text-align:center;padding:6px 0;">여기</div>'
+                            content: '<div style="width:150px;text-align:center;padding:6px 0;">호텔</div>'
                         });
                         infowindow.open(map, marker);
                     
@@ -111,7 +109,8 @@
                 })
             </script>
             <div class="tour_info">
-
+                <button id="tour_btn">주변 광광지 정보 보기</button>
+                
             </div>
         </div>
     </div>

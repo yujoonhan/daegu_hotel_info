@@ -4,7 +4,7 @@
 .hotel_list_area {width: 1080px; height: 900px; background-color: #bfa; margin: auto;}
 
 .main_menu a, p {text-decoration: none; color: #333;
-    display: inline-block; font-weight: 600; padding: 15px; margin-left: 80px;
+    display: inline-block; font-weight: 600; padding: 15px; margin-left: 120px;
     font-size: 18px;
 }
 .banner_area img {margin-top: 20px; width: 100px;}
