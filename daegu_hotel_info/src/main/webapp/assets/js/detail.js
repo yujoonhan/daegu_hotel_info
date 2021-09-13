@@ -118,7 +118,7 @@ $(function(){
                     if(r.list[i].t_tel == null){
                         r.list[i].t_tel = "없음";
                     }
-                    // console.log(Math.floor(i/5));
+                    console.log(Math.floor(i/5));
                     let page = Math.floor(i/5);
                     let tag =
                     '<tr>'+
