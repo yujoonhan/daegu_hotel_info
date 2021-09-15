@@ -24,7 +24,7 @@
     <select id="selectHotelImagePath" resultType="java.lang.String">
         select himg_file_name from hotel_image where himg_uri=#{uri} order by himg_seq desc limit 1
     </select>
-    <update id="updateProduct">
+    <update id="updateHotelImage">
         update daegu_hotel_info set
             h_img_uri = #{h_img_uri}
         where h_seq = #{h_seq}
