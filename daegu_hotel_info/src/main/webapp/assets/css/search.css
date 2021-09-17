@@ -1,3 +1,50 @@
 .hotel_search_list img{
     width: 100px;
 }
+.container{
+    background-color: #bfa;
+}
+.search_area select{
+    margin-left: 230px;
+    margin-top: 10px;
+    border: 2px solid #fab;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    width: 150px;
+    height: 46px;
+    cursor: pointer;
+}
+.search_area input{
+    margin-top: 10px;
+    border: 2px solid #fab;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    width: 340px;
+    height: 40px;
+}
+.search_area button{
+    margin-top: 10px;
+    border: 2px solid #fab;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100px;
+    height: 46px;
+    cursor: pointer;
+}
+.search_result thead {
+    background-color: #333; color: #fff;
+    height: 30px;
+    vertical-align: middle;
+}

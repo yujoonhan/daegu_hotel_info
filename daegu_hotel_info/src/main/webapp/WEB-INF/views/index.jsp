@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="all_hotel_list">
+        <div class="all_hotel_list"></div>
             <!-- 호텔 목록 표시 -> js에서 테이블을 이용한 표시로 변경 -->
             <!-- <c:forEach items="${hotel_list}" var="item">
                 <a href="/detail?h_seq=${item.h_seq}" class="prod_item">
@@ -24,7 +24,6 @@
                     </div>
                 </a>
             </c:forEach> -->
-        </div>
         <div class="pager_area">
             <button id="page_prev">&lt;</button>
             <span class="current">1</span> / <span class="total">8</span>

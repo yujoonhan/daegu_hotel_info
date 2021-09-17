@@ -1,3 +1,44 @@
+.hotel_list_area{
+    background-color: #fff;
+}
+.hotel_list_area > h1{
+    padding-top: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+.cart_hotel {
+    width: 300px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 40px;
+}
 .cart_hotel img{
-    width: 100px;
+    width: 300px;
+    height: 300px;
+}
+.text_area {
+    margin-top: 10px;
+    border: 2px solid #fba;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.button_area button{
+    margin-top: 10px;
+    border: 2px solid #fab;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    width: 300px;
+    height: 40px;
+    cursor:pointer;
 }
