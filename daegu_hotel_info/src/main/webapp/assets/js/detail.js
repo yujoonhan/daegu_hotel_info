@@ -84,10 +84,10 @@ $(function(){
         '<p>주변 관광지 정보</p>'+
         '<table class="tour_table">'+
             '<thead class="tour_head">'+
-                '<td>관광지 이름</td>'+
-                '<td>주소</td>'+
-                '<td>전화전호</td>'+
-                '<td>설명</td>'+
+                '<td id="tu_name">관광지 이름</td>'+
+                '<td id="tu_adr">주소</td>'+
+                '<td id="tu_tel">전화전호</td>'+
+                '<td id="tu_cont">설명</td>'+
             '</thead>'+
         '</table>'+
         '<div class="pager_area">'+

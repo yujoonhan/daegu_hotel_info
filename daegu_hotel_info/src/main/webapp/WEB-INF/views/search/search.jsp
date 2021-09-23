@@ -26,13 +26,13 @@
         <div class="search_result">
             <table>
                 <thead>
-                    <td>이미지</td>
-                    <td>이름</td>
-                    <td>주소</td>
-                    <td>전화번호</td>
-                    <td>제공</td>
-                    <td>시설</td>
-                    <td>태그</td>
+                    <td id="td_img">이미지</td>
+                    <td id="td_name">이름</td>
+                    <td id="td_adr">주소</td>
+                    <td id="td_tel">전화번호</td>
+                    <td id="td_off">제공</td>
+                    <td id="td_fac">시설</td>
+                    <td id="td_tag">태그</td>
                 </thead>
                 <tbody class="hotel_search_list">
 

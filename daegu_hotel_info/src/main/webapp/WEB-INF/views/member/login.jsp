@@ -35,10 +35,12 @@
                     <td colspan="4">
                         <button id="login_btn">로그인</button>
                     </td>
+                </tr>
+                <tr>
                     <td colspan="4">
-                        <button id="chk_email">
-                            <a href="/join">회원가입</a>
-                        </button>
+                        <a href="/join">
+                            <button id="chk_email">회원가입</button>
+                        </a>
                     </td>
                 </tr>
             </tbody>

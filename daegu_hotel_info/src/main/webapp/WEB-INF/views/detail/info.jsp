@@ -55,7 +55,6 @@
                         </tbody>
                     </table>
                 </div>
-                </table>
                 <button id="cart_bag">관심 목록에 추가</button>
             </div>
             <div class="img_form_div">
@@ -110,7 +109,6 @@
             </script>
             <div class="tour_info">
                 <button id="tour_btn">주변 광광지 정보 보기</button>
-                
             </div>
         </div>
     </div>

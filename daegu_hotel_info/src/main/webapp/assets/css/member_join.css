@@ -3,7 +3,7 @@
     margin-bottom: 50px; margin-top: 50px;
 }
 .table td{
-    padding: 5px;
+    padding-bottom: 30px;
 }
 .table input, .table select{
     width: 300px; padding: 10px; outline: none;
@@ -12,7 +12,7 @@
 .table input{width: 300px;}
 .table button{
     border: 0; border-radius: 3px; background-color: rgb(88, 88, 88);
-    color: #fff; padding: 10px 30px; cursor: pointer;
+    color: #fff; cursor: pointer; height: 40px; width: 100px;
 }
 .table #join{
     width: 200px; margin-top: 30px; margin-left: 100px;
@@ -24,3 +24,7 @@
 .table tr:last-child{text-align: center;}
 .table select{width: 322px;}
 body{background-color: #fcfcfc;}
+
+#login_btn{
+    margin-left: 220px;
+}
