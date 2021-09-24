@@ -1,18 +1,35 @@
-.img_area img{
-    height: auto;
-    width: 400px;
-}
-.text_area{
-    text-align: center;
-    background-color: #baf;
-    width: 400px;
-    height: 400px;
+.detail_container {
+    width: 1080px;
+    height: 600px;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 500px;
     font-size: 18px;
+    margin-top: 50px;
 }
-.text_area td{
+.product_list{
+    float: right;
+    width: 400px;
+    text-align: center;
+    margin-right: 130px;
+    margin-top: 100px;
+}
+.product_list td{
     padding: 10px;
+}
+.img_area {
+    float: left;
+}
+.img_area img {
+    margin-left: 100px;
+    width: 400px;
+}
+.img_form_div{
+    margin-top: 50px;
+}
+
+.tour_info {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .tour_head {background-color: #333; color: #fff;}
 .tour_tbody {background-color: #fff;}
@@ -30,19 +47,7 @@
     cursor:pointer;
 }
 
-/* #image_form button {
-    margin-top: 30px;
-    border: solid;
-    border-radius: 5px;
-    text-align: center;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 500;
-    width: 120px;
-    height: 40px;
-    cursor:pointer;
-} */
+
 .tour_info p{
     margin-left: 450px;
     padding: 30px;

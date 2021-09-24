@@ -27,47 +27,47 @@
             <div class="img_area">
                 <img src="/image/${product.h_img_uri}">
             </div>
-            <div class="text_area">
-                <div class="product_list list">
-                    <table id="product_table">
-                        <thead>
-                            <tr>
-                                <td>${product.h_shop}</td>
-                            </tr>
-                            <tr>
-                                <td>${product.h_address}</td>
-                            </tr>
-                            <tr>
-                                <td>${product.h_tel}</td>
-                            </tr>
-                            <tr>
-                                <td>${product.h_offer}</td>
-                            </tr>
-                            <tr>
-                                <td>${product.h_facilities}</td>
-                            </tr>
-                            <tr>
-                                <td>${product.h_tag}</td>
-                            </tr>
-                        </thead>
-                        <tbody id="product_tbody">
-                            
-                        </tbody>
-                    </table>
-                </div>
+            <div class="product_list list">
+                <table id="product_table">
+                    <thead>
+                        <tr>
+                            <td>${product.h_shop}</td>
+                        </tr>
+                        <tr>
+                            <td>${product.h_address}</td>
+                        </tr>
+                        <tr>
+                            <td>${product.h_tel}</td>
+                        </tr>
+                        <tr>
+                            <td>${product.h_offer}</td>
+                        </tr>
+                        <tr>
+                            <td>${product.h_facilities}</td>
+                        </tr>
+                        <tr>
+                            <td>${product.h_tag}</td>
+                        </tr>
+                    </thead>
+                    <tbody id="product_tbody">
+                        
+                    </tbody>
+                </table>
                 <button id="cart_bag">관심 목록에 추가</button>
+                <div class="img_form_div">
+                    <span id="img_preview">
+                    </span>
+                    <form id="image_form">
+                        <input type="file" accept="image/gif, image/jpeg, image/png" name="file" value="호텔이미지 선택">
+                        <button type="button" id="img_save" data-seq=${product.h_seq}>사진 확인</button>
+                        <button type="button" id="img_delete" disabled>삭제</button>
+                        <button id="save">사진 등록하기</button>
+                    </form>
+                </div>
             </div>
-            <div class="img_form_div">
-                <span id="img_preview">
-                </span>
-                <form id="image_form">
-                    <input type="file" accept="image/gif, image/jpeg, image/png" name="file" value="호텔이미지 선택">
-                    <button type="button" id="img_save" data-seq=${product.h_seq}>사진 확인</button>
-                    <button type="button" id="img_delete" disabled>삭제</button>
-                    <button id="save">사진 등록하기</button>
-                </form>
-            </div>
-            <div id="map" style="width:500px;height:400px;"></div>
+        </div>
+        <div class="detail_container_2" data-prod-seq="${product.h_seq}"></div>
+            <div id="map" style="width:1000px;height:400px;margin-left:35px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9690c185cffddbedc14fd293bb5bc1b6&libraries=services"></script>
             <script>
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
