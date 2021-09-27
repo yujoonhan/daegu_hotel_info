@@ -13,11 +13,11 @@ $(function(){
                 console.log(Math.floor(i/9));
                 let page = Math.floor(i/9);
                 let tag =
-                '<tr>'+
-                    '<td>'+
+                '<tr class="hotel_tr">'+
+                    '<td class="hotel_td">'+
                         '<a href="/detail?h_seq='+r.data[i].h_seq+'">'+
                             '<img src="/image/'+r.data[i].h_img_uri+'">'+   
-                            r.data[i].h_shop+
+                            '<p>'+r.data[i].h_shop+'</p>'
                         '</a>'+
                     '</td>'+
                 '</tr>';

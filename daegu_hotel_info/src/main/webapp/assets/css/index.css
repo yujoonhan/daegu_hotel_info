@@ -1,13 +1,20 @@
 .pager_area {font-size: 14px; text-align: center; margin-top: 10px; height: 50px;}
 .pager_area .current {font-weight: 700;}
-.dashboard_content:first-child {padding-top: 0;}
-.hotel-tbody {display: none;}
-.hotel-tbody.active {display: table-row-group;}
 
+.hotel-tbody {
+    display: none;
+}
+.hotel_tr {
+    display: block;
+    background-color: #bbaaff;
+    width: 300px;
+    height: 370px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.hotel-tbody.active {display: table-row-group;}
 .all_hotel_list img{
     width: 300px;
     height: 300px;
-}
-.hotel-tbody img{
-    width: 300px;
 }
